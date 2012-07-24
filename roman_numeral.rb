@@ -1,6 +1,7 @@
 class RomanNumeral
 
   def initialize(numerals)
+    raise 'Invalid Numerals' unless numerals =~ VALID_NUMERALS
     @numerals = numerals
   end
 
@@ -34,6 +35,9 @@ class RomanNumeral
              'C' => 100,
              'D' => 500,
              'M' => 1000}
+
+  # Regex from http://j.mp/O4C8Hx
+  VALID_NUMERALS = /^M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$/
 
 end
 

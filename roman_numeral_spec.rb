@@ -5,6 +5,12 @@ require 'roman_numeral'
 
 describe RomanNumeral do
 
+  describe 'new' do
+    it 'raises an exception if the numerals are invalid' do
+      expect{RomanNumeral.new('IIV')}.to raise_error('Invalid Numerals')
+    end
+  end
+
   describe 'to_integer' do
 
     it 'returns the value 1 for symbol I' do
