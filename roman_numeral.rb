@@ -8,12 +8,21 @@ class RomanNumeral
              'D' => 500,
              'M' => 1000}
 
-  def initialize(numeral)
-    @numeral = numeral
+  def initialize(numerals)
+    @numerals = numerals
   end
 
   def to_integer
-    return SYMBOLS.fetch @numeral
+    total = 0
+    @numerals.each_char do |symbol|
+      total += get_symbol_value(symbol)
+    end
+    return total
+  end
+
+  def get_symbol_value(symbol)
+    return SYMBOLS.fetch symbol
   end
 
 end
+

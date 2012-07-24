@@ -19,5 +19,10 @@ describe RomanNumeral do
       end
     end
 
+    it 'returns the sum of the symbols' do
+      RomanNumeral.new('MDCLXVI').to_integer.should == 1666
+    end
+
   end
 end
+
