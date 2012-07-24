@@ -1,13 +1,5 @@
 class RomanNumeral
 
-  SYMBOLS = {'I' => 1,
-             'V' => 5,
-             'X' => 10,
-             'L' => 50,
-             'C' => 100,
-             'D' => 500,
-             'M' => 1000}
-
   def initialize(numerals)
     @numerals = numerals
   end
@@ -29,9 +21,19 @@ class RomanNumeral
     return total
   end
 
+  private
+
   def get_symbol_value(symbol)
     return SYMBOLS.fetch symbol
   end
+
+  SYMBOLS = {'I' => 1,
+             'V' => 5,
+             'X' => 10,
+             'L' => 50,
+             'C' => 100,
+             'D' => 500,
+             'M' => 1000}
 
 end
 
