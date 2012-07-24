@@ -27,6 +27,10 @@ describe RomanNumeral do
       RomanNumeral.new('IX').to_integer.should == 9
     end
 
+    it 'returns the correct value numerals upto MMMCMXCIX' do
+      RomanNumeral.new('MMMCMXCIX').to_integer.should == 3999
+    end
+
   end
 end
 
