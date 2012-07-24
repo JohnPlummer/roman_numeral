@@ -23,6 +23,10 @@ describe RomanNumeral do
       RomanNumeral.new('MDCLXVI').to_integer.should == 1666
     end
 
+    it 'returns the correct value when numerals are reversed (e.g. IX == 9)' do
+      RomanNumeral.new('IX').to_integer.should == 9
+    end
+
   end
 end
 
